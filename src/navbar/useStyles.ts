@@ -7,6 +7,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  btn: {
+    textTransform: "capitalize",
+    fontSize: `1rem`,
+    fontWeight: 600,
+  },
 }));
 
 export default useStyles;

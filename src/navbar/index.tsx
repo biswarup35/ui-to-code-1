@@ -9,7 +9,6 @@ import {
   IconButton,
 } from "@mui/material";
 import useStyles from "./useStyles";
-
 import * as React from "react";
 import Mobile from "./mobile";
 import { useMediaQuery, Theme } from "@mui/material";
@@ -24,8 +23,8 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
   const handleOpen = () => setOpen(true);
   return (
     <React.Fragment>
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar variant="dense">
+      <AppBar position="static" color="transparent" elevation={0}>
+        <Toolbar>
           <Container maxWidth="lg" className={classes.navbar}>
             <Box>
               {!smUP && (
@@ -38,17 +37,27 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
             </Box>
             {smUP && (
               <Stack direction="row" spacing={2}>
-                <Button>Products</Button>
-                <Button variant="outlined" color="secondary">
-                  Pricing
+                <Button sx={{ color: "GrayText" }} className={classes.btn}>
+                  Products
                 </Button>
-                <Button>About</Button>
-                <Button>Blog</Button>
+                <Button className={classes.btn}>Pricing</Button>
+                <Button sx={{ color: "GrayText" }} className={classes.btn}>
+                  About
+                </Button>
+                <Button sx={{ color: "GrayText" }} className={classes.btn}>
+                  Blog
+                </Button>
               </Stack>
             )}
             {!smUP && <Typography>FirstByte</Typography>}
             <Box>
-              <Button variant="outlined">Login</Button>
+              <Button
+                sx={{ color: "GrayText" }}
+                className={classes.btn}
+                variant="outlined"
+              >
+                Login
+              </Button>
             </Box>
           </Container>
         </Toolbar>

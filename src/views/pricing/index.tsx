@@ -29,7 +29,7 @@ const Pricing: React.FunctionComponent<PricingProps> = () => {
           justifyContent="center"
         >
           {table.map((item) => (
-            <Grid key={item.plan} item xs={10} sm={6} md={3}>
+            <Grid key={item.plan} item xs={10} sm={6} md={4} lg={3}>
               <Card
                 active={item.remark == "Recommended" ? true : false}
                 plan={item.plan}

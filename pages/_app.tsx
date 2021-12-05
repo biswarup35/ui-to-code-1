@@ -5,6 +5,7 @@ import theme from "../src/theme";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Navbar from "../src/navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <Navbar />
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>
